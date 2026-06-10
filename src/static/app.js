@@ -295,13 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       const startTime = formatTime(details.schedule_details.start_time);
-      const endTimeValue = details.schedule_details.end_time;
-
-      if (!endTimeValue || endTimeValue === details.schedule_details.start_time) {
-        return `${days}, ${startTime}`;
-      }
-
-      const endTime = formatTime(endTimeValue);
+      const endTime = formatTime(details.schedule_details.end_time);
 
       return `${days}, ${startTime} - ${endTime}`;
     }
